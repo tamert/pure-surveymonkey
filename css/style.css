@@ -1,0 +1,277 @@
+@charset "UTF-8";
+body {
+	font-family: Arial;
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+
+/* Reset `button` */
+
+[role="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button {
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+}
+
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button {
+	background: none;
+	border: 0;
+	outline: none;
+	color: inherit;
+	font: inherit;
+	line-height: normal;
+	overflow: visible;
+	padding: 0;
+	-webkit-appearance: button;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+}
+
+input::-moz-focus-inner,
+button::-moz-focus-inner {
+	border: 0;
+	outline: none;
+	padding: 0;
+}
+
+[role="button"] {
+	color: inherit;
+	cursor: default;
+	display: inline-block;
+	text-align: center;
+	text-decoration: none;
+	white-space: pre;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+}
+
+#survey-pop {
+	position: fixed;
+	display: none;
+	bottom: 0.8em;
+	right: 0.8em;
+}
+
+#survey-pop .box {
+	border: 2px solid #FAEBD7;
+	border-radius: 0.8em;
+	background: #FAEBD7;
+	width: 400px;
+	height: 270px;
+	padding: 0.8em;
+	position: relative;
+}
+
+#survey-pop .box #box-header {
+	font-size: 1em;
+}
+
+
+#survey-pop .box #box-header .close {
+	position: absolute;
+	right: 15px;
+	top: 0;
+	width: 32px;
+	height: 32px;
+	cursor: pointer;
+	opacity: 0.3;
+}
+
+#survey-pop .box #box-header .close:hover {
+	opacity: 1;
+}
+
+#survey-pop .box #box-header .close:before,
+#survey-pop .box #box-header .close:after {
+	position: absolute;
+	left: 15px;
+	content: ' ';
+	height: 22px;
+	width: 4px;
+	border-radius: 2px;
+	background-color: rgb(223, 117, 20);
+}
+
+#survey-pop .box #box-header .close:before {
+	transform: rotate(45deg);
+}
+
+#survey-pop .box #box-header .close:after {
+	transform: rotate(-45deg);
+}
+
+#survey-pop .box .box-body #step-area {
+	position: absolute;
+	bottom: 15px;
+	width: 100%;
+	text-align: center;
+}
+
+#survey-pop .box .box-body {
+	font-size: 0.7em;
+	line-height: 0.8em;
+}
+
+
+#survey-pop .box .box-body .question,
+#survey-pop .box .box-body .text {
+	color: rgb(223, 117, 20);
+}
+
+#survey-pop .box .box-body .question {
+	line-height: 1.8em;
+}
+
+
+#survey-pop .box .box-body .hr {
+	border-top: 1px solid rgba(223, 117, 20, 0.9);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+	border-left: none;
+	border-right: : none;
+}
+
+#survey-pop .box .box-body #step-area .step.active {
+	background: rgb(223, 117, 20);
+}
+
+#survey-pop .box .box-body #step-area .step {
+	margin: 0.2em;
+	width: 0.8em;
+	height: 0.8em;
+	display: inline-block;
+	border-radius: 50%;
+	background: white;
+	transform-origin: 50% 9vw;
+}
+
+.button {
+	font-family: inherit;
+	font-size: 100%;
+	padding: .5em 1em;
+	color: #444;
+	color: rgba(0, 0, 0, .8);
+	border: 1px solid #999;
+	border: none transparent;
+	background-color: #e6e6e6;
+	text-decoration: none;
+	border-radius: 2px;
+	cursor: pointer;
+}
+
+.button:hover {
+	opacity: 0.7;
+}
+
+.text-left {
+	text-align: left;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.button-success,
+.button-error,
+.button-warning,
+.button-secondary {
+	color: white;
+	border-radius: 4px;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.button-success {
+	background: rgb(28, 184, 65);
+}
+
+.button-error {
+	background: rgb(202, 60, 60);
+}
+
+.button-warning {
+	background: rgb(223, 117, 20);
+}
+
+.button-secondary {
+	background: rgb(66, 184, 221);
+}
+
+.mt-1 {
+	margin-top: 0.5em;
+}
+
+.mt-2 {
+	margin-top: 1em;
+}
+
+.mt-3 {
+	margin-top: 1.5em;
+}
+
+.mt-4 {
+	margin-top: 2em;
+}
+
+.mt-5 {
+	margin-top: 2.5em;
+}
+
+
+.rating {
+	border: none;
+	width: 100%;
+}
+
+.rating>input {
+	display: none;
+}
+
+.rating>label:before {
+	margin: 5px;
+	font-size: 1.25em;
+	display: inline-block;
+	content: "\2605";
+}
+
+
+.rating>label {
+	cursor: pointer;
+	width: 20%;
+	text-align: center;
+	color: rgba(223, 117, 20);
+	float: right;
+}
+
+.rating>label>span {
+	display: block;
+	padding-top: 1.5em;
+	line-height: 1.2em;
+	font-size: 1em;
+}
+
+.rating>input:checked~label,
+.rating:not(:checked)>label:hover,
+.rating:not(:checked)>label:hover~label {
+		color: red;
+}
+
+.rating>input:checked+label:hover,
+.rating>input:checked~label:hover,
+.rating>label:hover~input:checked~label,
+.rating>input:checked~label:hover~label {
+	color: rgb(223, 117, 20);
+}
